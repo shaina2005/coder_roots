@@ -6,7 +6,7 @@ function History() {
 
   const fetchBookings = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/book/");
+      const response = await axios.get("https://coder-roots.onrender.com/book/");
       setBookings(response.data);
     } catch (error) {
       console.log("Error fetching bookings:", error.message);

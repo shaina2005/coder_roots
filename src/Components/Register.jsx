@@ -14,7 +14,7 @@ function Register() {
     console.log("register");
 
     try {
-      const response = await axios.post("http://localhost:5000/register", {
+      const response = await axios.post("https://coder-roots.onrender.com/register", {
         name,
         email,
         password,
