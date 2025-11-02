@@ -14,8 +14,9 @@ function Shaina() {
     return exists === "true" ? true : false;
   });
   const [username, setusername] = useState(() => {
-    const user = localStorage.getItem("username");
-    return user && user.trim() != "" ? user : "Guest";
+    // const user = localStorage.getItem("username");
+    // return user && user.trim() != "" ? user : "Guest";
+    return "testing eror";
   });
 
   const [emailLogin, setEmailLogin] = useState(() => {
