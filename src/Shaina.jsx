@@ -27,7 +27,7 @@ function Shaina() {
   });
   return (
     <div>
-      <BrowserRouter>
+      <>
         <Navbar isLogin={isLogin} />
         <Routes>
           {isLogin && (
@@ -82,7 +82,7 @@ function Shaina() {
             </>
           )}
         </Routes>
-      </BrowserRouter>
+      </>
     </div>
   );
 }
