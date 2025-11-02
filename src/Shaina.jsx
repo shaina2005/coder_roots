@@ -15,7 +15,7 @@ function Shaina() {
   });
   const [username, setusername] = useState(() => {
     const user = localStorage.getItem("username");
-    return user.trim() != "" ? user : "Guest";
+    return user && user.trim() != "" ? user : "Guest";
   });
 
   const [emailLogin, setEmailLogin] = useState(() => {
