@@ -12,7 +12,7 @@ function App() {
 
   return (
     <div>
-      <BrowserRouter>
+      <>
         <Navbar isLogin={isLogin} />
         <Routes>
           <Route path="/" element={<Login setIslogin={setIslogin} />} />
@@ -27,7 +27,7 @@ function App() {
             element={isLogin ? <History /> : <Login setIslogin={setIslogin} />}
           />
         </Routes>
-      </BrowserRouter>
+      </>
     </div>
   );
 }
