@@ -10,7 +10,7 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-mongoose.connect("mongodb://localhost:27017/coder_roots").then(() => {
+mongoose.connect(process.env.MONGO_DB).then(() => {
   console.log("Database connected : ", mongoose.connection.name);
 });
 app.use(cors());
