@@ -6,6 +6,9 @@ import loginRoute from "./routes/loginRoutes.js";
 import registerRoute from "./routes/registerRoute.js";
 import bookRoutes from "./routes/bookRoutes.js";
 import cookieParser from "cookie-parser";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 mongoose.connect("mongodb://localhost:27017/coder_roots").then(() => {
   console.log("Database connected : ", mongoose.connection.name);
@@ -24,7 +27,7 @@ app.use("/register", registerRoute);
 app.use("/book", bookRoutes);
 
 app.use(express.json());
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log("Server running at : ", 5000);
 });
